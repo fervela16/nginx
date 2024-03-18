@@ -1,0 +1,27 @@
+git config --global alias.s "status -s -b"
+git config --global alias.get "! git pull origin $1"
+git config --global alias.getall "! git pull origin"
+git config --global alias.new "! git checkout -b $1"
+git config --global alias.set "! git checkout $1"
+git config --global alias.del "! git branch -D $1"
+git config --global alias.lb "! git branch -v"
+git config --global alias.main "! git branch -M main"
+
+git config --global alias.prepare "! git add .; git commit -m Prepare"
+git config --global alias.feat '! feat() { git add . && git commit -m "feat:$1" && git push -u origin; }; feat'
+git config --global alias.review '! review() { git add . && git commit -m "review:$1" && git push -u origin; }; review'
+git config --global alias.fix '! fix() { git add . && git commit -m "fix:$1" && git push -u origin; }; fix'
+git config --global alias.bug '! bug() { git add . && git commit -m "bug:$1" && git push -u origin; }; bug'
+
+git config --global alias.initial "! git add .; git commit -m 'Initial'; git push -u origin --all"
+git config --global alias.update "! git add .; git commit -m 'Update'; git push -u origin $1"
+git config --global alias.backup "! git add .; git commit -m 'Backup'; git push -u origin $1"
+#Reset commit and preserve changes
+git config --global alias.rhs 'reset HEAD^ --soft'
+#Reset commit and discard changes
+git config --global alias.rhh 'reset HEAD^ --hard' 
+git config --global alias.clean 'git rm -r --cached .'
+git config --global alias.tags "! git push -u origin --tags"
+
+git config --global user.email "cgalvisleon@gmail.com"
+git config --global user.name "Cesar Galvis Leon"
