@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  ftp:
+    image: my-nginx:latest
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1m"
+        max-file: "2"
+    ports:
+      - 80:80
+      - 443:443    
+    volumes:
+      - ./html:/usr/share/nginx/html
